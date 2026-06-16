@@ -7,6 +7,8 @@ cask "agentmeter" do
   desc "Menu-bar usage meter for Claude Code and OpenAI Codex"
   homepage "https://github.com/TeaLance/AgentMeter"
 
+  # Keep the ">=" string form: a bare `:sonoma` means EXACTLY Sonoma and would
+  # block Sequoia/macOS 26+. The deprecation warning is a known Homebrew quirk.
   depends_on macos: ">= :sonoma"
 
   app "AgentMeter.app"
